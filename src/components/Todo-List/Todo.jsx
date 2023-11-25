@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaCheck } from "react-icons/fa";
+
 import { getDataFromLocalstorage } from "./utils/Utils";
 import "./todo.css";
 
@@ -76,23 +78,30 @@ const Todo = () => {
               onChange={handleInput}
             />
             <button onClick={addTodo} className="add__task-btn">
-              Add task
+              <i className="fa-solid fa-plus"></i>
             </button>
           </div>
-          <ol className="all_tasks">
+          <ul className="all_tasks">
             {todos.map((todo, index) => (
               <li id="1" key={index}>
                 <hr className="todo-border" />
                 <div className="todo-section">
                   <div className="todo__edit">
                     <span className="">
-                      <i
+                      {/* <i
                         id="checked1"
-                        className={`fa fa-check ${
+                        className={`fa fa-check complete-icon ${
                           todo.completed ? "completed" : ""
                         }`}
                         onClick={() => toggleComplete(index)}
-                      ></i>
+                      ></i> */}
+                      <FaCheck
+                        id="checked1"
+                        className={`fa fa-check complete-icon ${
+                          todo.completed ? "completed" : ""
+                        }`}
+                        onClick={() => toggleComplete(index)}
+                      />
                     </span>
                     <p
                       className={`todo__edit--input ${
@@ -130,7 +139,7 @@ const Todo = () => {
                 </div>
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </div>
     </div>
