@@ -1,0 +1,22 @@
+.completed-text {
+  font-style: italic;
+  color: #cdcdcd;
+  text-decoration: line-through;
+  width: 82%;
+  padding-left: 5px;
+}
+
+/* ======== Design Start ============== */
+
+.todo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.todo__edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
